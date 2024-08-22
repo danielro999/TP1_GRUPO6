@@ -1,7 +1,9 @@
 package com.example.tp1_grupo6v3;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Button boton1 = findViewById(R.id.button2);
         Button boton2 = findViewById(R.id.button3);
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        boton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ej1_Activity.class);
@@ -27,13 +29,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button3.setOnClickListener(new View.OnClickListener() {
+    /*    boton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Ejercicio2.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
 
     }
