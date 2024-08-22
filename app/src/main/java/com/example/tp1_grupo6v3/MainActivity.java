@@ -29,13 +29,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    /*    boton2.setOnClickListener(new View.OnClickListener() {
+        boton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Ejercicio2.class);
+                Intent intent = new Intent(MainActivity.this, ej2_Activity.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
 
     }
