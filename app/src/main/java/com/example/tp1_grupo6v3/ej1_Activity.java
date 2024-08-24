@@ -1,5 +1,6 @@
 package com.example.tp1_grupo6v3;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -38,8 +39,15 @@ public class ej1_Activity extends AppCompatActivity {
     int suma = nro1 + nro2;
     String resu = String.valueOf(suma);
     RESULTADO.setText(resu);
-
-
   }
+
+  public void VolverMain(View view){
+      Intent volverMain = new Intent(this, MainActivity.class);
+      startActivity(volverMain);
+  }
+
+
+
+
 
 }
