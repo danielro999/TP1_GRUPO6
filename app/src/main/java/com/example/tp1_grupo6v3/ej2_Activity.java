@@ -155,9 +155,14 @@ public class ej2_Activity extends AppCompatActivity {
         });
     }
 
-    private void agregarNumero(String numero) {
-        String textoActual = pantalla.getText().toString();
-        pantalla.setText(textoActual + numero);
+    private boolean agregarNumero(String numero) {
+        if (!operacion && pantalla.getText().toString().equals(String.valueOf(valor1))) {
+            pantalla.setText(numero);
+        } else {
+            String textoActual = pantalla.getText().toString();
+            pantalla.setText(textoActual + numero);
+        }
+        return true;
     }
 
     private void prepararOperacion(String operacion) {
@@ -190,6 +195,7 @@ public class ej2_Activity extends AppCompatActivity {
                 break;
         }
         pantalla.setText(String.valueOf(resultado));
+        valor1 = resultado;
         operador = "";
         operacion = false;
     }
