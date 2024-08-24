@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,11 +35,16 @@ public class ej1_Activity extends AppCompatActivity {
 
     String valor1 = NUMERO1.getText().toString();
     String valor2 = NUMERO2.getText().toString();
-    int nro1 = Integer.parseInt(valor1);
-    int nro2 = Integer.parseInt(valor2);
-    int suma = nro1 + nro2;
-    String resu = String.valueOf(suma);
-    RESULTADO.setText(resu);
+      if (valor1.isEmpty() || valor2.isEmpty()){
+          Toast.makeText(this, "Ingrese un numero en las dos lineas", Toast.LENGTH_LONG).show();
+      }else{
+          int nro1 = Integer.parseInt(valor1);
+          int nro2 = Integer.parseInt(valor2);
+          int suma = nro1 + nro2;
+          String resu = String.valueOf(suma);
+          RESULTADO.setText(resu);
+      }
+
   }
 
   public void VolverMain(View view){

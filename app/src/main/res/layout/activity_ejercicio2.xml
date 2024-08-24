@@ -5,261 +5,433 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ej2_Activity">
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="0dp"
+        android:layout_height="118dp"
+        android:layout_marginBottom="10dp"
+        android:background="#3F51B5"
+        android:text="@string/txt_calculadora"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <EditText
         android:id="@+id/Pantalla"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:inputType="none"
-        android:hint="0"
-        android:gravity="end|center_vertical"
-        android:textSize="36sp"
-        android:padding="16dp"
+        android:layout_width="411dp"
+        android:layout_height="117dp"
         android:background="#FFFFFF"
+        android:gravity="end|center_vertical"
+        android:hint="@string/pantalla_0"
+        android:inputType="none"
+        android:padding="16dp"
         android:textColor="#000000"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.721"
         app:layout_constraintWidth_percent="1.0" />
 
-    <Button
-        android:id="@+id/BorrarTodo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="CE"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/Pantalla"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/Dividido"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
-
-    <Button
-        android:id="@+id/Dividido"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="/"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/Pantalla"
-        app:layout_constraintStart_toEndOf="@id/BorrarTodo"
-        app:layout_constraintEnd_toStartOf="@id/Mas"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
-
-    <Button
-        android:id="@+id/Mas"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="+"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/Pantalla"
-        app:layout_constraintStart_toEndOf="@id/Dividido"
-        app:layout_constraintEnd_toStartOf="@id/Menos"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
-
-    <Button
-        android:id="@+id/Menos"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="-"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/Pantalla"
-        app:layout_constraintStart_toEndOf="@id/Mas"
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="361dp"
+        android:layout_height="273dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
-
-    <Button
-        android:id="@+id/Siete"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="7"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/BorrarTodo"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/Ocho"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
+        app:layout_wrapBehaviorInParent="horizontal_only">
 
-    <Button
-        android:id="@+id/Ocho"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="8"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/BorrarTodo"
-        app:layout_constraintStart_toEndOf="@id/Siete"
-        app:layout_constraintEnd_toStartOf="@id/Nueve"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/Nueve"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="9"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/BorrarTodo"
-        app:layout_constraintStart_toEndOf="@id/Ocho"
-        app:layout_constraintEnd_toStartOf="@id/Multiplicacion"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
+            <Button
+                android:id="@+id/BorrarTodo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ce"
+                android:textSize="36sp" />
 
-    <Button
-        android:id="@+id/Multiplicacion"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="*"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/BorrarTodo"
-        app:layout_constraintStart_toEndOf="@id/Nueve"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
+            <Button
+                android:id="@+id/Dividido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/divisor"
+                android:textSize="36sp" />
 
-    <Button
-        android:id="@+id/Cuatro"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="4"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/Siete"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/Cinco"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
+            <Button
+                android:id="@+id/Mas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mas"
+                android:textSize="36sp" />
 
-    <Button
-        android:id="@+id/Cinco"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="5"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/Ocho"
-        app:layout_constraintStart_toEndOf="@id/Cuatro"
-        app:layout_constraintEnd_toStartOf="@id/Seis"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
+            <Button
+                android:id="@+id/Menos"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/menos"
+                android:textSize="36sp" />
+        </TableRow>
 
-    <Button
-        android:id="@+id/Seis"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="6"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/Nueve"
-        app:layout_constraintStart_toEndOf="@id/Cinco"
-        app:layout_constraintEnd_toStartOf="@id/Igual"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/Igual"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="="
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/Nueve"
-        app:layout_constraintStart_toEndOf="@id/Seis"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
+            <Button
+                android:id="@+id/Siete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_7"
+                android:textSize="36sp" />
 
-    <Button
-        android:id="@+id/Uno"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="1"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/Cuatro"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/Dos"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
+            <Button
+                android:id="@+id/Ocho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_8"
+                android:textSize="36sp" />
 
-    <Button
-        android:id="@+id/Dos"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="2"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/Cinco"
-        app:layout_constraintStart_toEndOf="@id/Uno"
-        app:layout_constraintEnd_toStartOf="@id/Tres"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
+            <Button
+                android:id="@+id/Nueve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:textSize="36sp" />
 
-    <Button
-        android:id="@+id/Tres"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="3"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:background="#FFFFFF"
-        android:layout_margin="2dp"
-        app:layout_constraintTop_toBottomOf="@id/Seis"
-        app:layout_constraintStart_toEndOf="@id/Dos"
-        app:layout_constraintEnd_toStartOf="@id/Cero"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintHeight_percent="0.15"/>
+            <Button
+                android:id="@+id/Multiplicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/multiplicar"
+                android:textSize="36sp" />
+        </TableRow>
 
-    <Button
-        android:id="@+id/Cero"
-        android:layout_width="88dp"
-        android:layout_height="111dp"
-        android:layout_margin="2dp"
-        android:background="#FFFFFF"
-        android:text="0"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.15"
-        app:layout_constraintStart_toEndOf="@id/Tres"
-        app:layout_constraintTop_toBottomOf="@id/Seis"
-        app:layout_constraintWidth_percent="0.5" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Cuatro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_4"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/Cinco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_5"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/Seis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_6"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/Igual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="="
+                android:textSize="36sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Uno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_1"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/Dos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/Tres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_3"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/Cero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
+                android:textSize="36sp" />
+        </TableRow>
+    </TableLayout>
+
+
+    <!--
+
+        <Button
+            android:id="@+id/BorrarTodo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="CE"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/Dividido"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.25"
+            tools:layout_editor_absoluteY="311dp" />
+
+        <Button
+            android:id="@+id/Dividido"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="/"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/Mas"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/BorrarTodo"
+            app:layout_constraintWidth_percent="0.25"
+            tools:layout_editor_absoluteY="294dp" />
+
+        <Button
+            android:id="@+id/Mas"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="+"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/Menos"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/Dividido"
+            app:layout_constraintWidth_percent="0.25"
+            tools:layout_editor_absoluteY="294dp" />
+
+        <Button
+            android:id="@+id/Menos"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="-"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/Mas"
+            app:layout_constraintWidth_percent="0.25"
+            tools:layout_editor_absoluteY="294dp" />
+
+        <Button
+            android:id="@+id/Siete"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="7"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/Ocho"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/BorrarTodo"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/Ocho"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="8"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/Nueve"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/Siete"
+            app:layout_constraintTop_toBottomOf="@id/BorrarTodo"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/Nueve"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="9"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/Multiplicacion"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/Ocho"
+            app:layout_constraintTop_toBottomOf="@id/BorrarTodo"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/Multiplicacion"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="*"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/Nueve"
+            app:layout_constraintTop_toBottomOf="@id/BorrarTodo"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/Cuatro"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="4"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/Cinco"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Siete"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/Cinco"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="5"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/Seis"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/Cuatro"
+            app:layout_constraintTop_toBottomOf="@id/Ocho"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/Seis"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="6"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/Igual"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/Cinco"
+            app:layout_constraintTop_toBottomOf="@id/Nueve"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/Igual"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="="
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/Seis"
+            app:layout_constraintTop_toBottomOf="@id/Nueve"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/Uno"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_marginTop="32dp"
+            android:background="#FFFFFF"
+            android:text="1"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/Dos"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Cuatro"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/Dos"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="2"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/Tres"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/Uno"
+            app:layout_constraintTop_toBottomOf="@id/Cinco"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/Tres"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="3"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/Cero"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/Dos"
+            app:layout_constraintTop_toBottomOf="@id/Seis"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <Button
+            android:id="@+id/Cero"
+            android:layout_width="88dp"
+            android:layout_height="111dp"
+            android:layout_margin="2dp"
+            android:background="#FFFFFF"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toEndOf="@id/Tres"
+            app:layout_constraintTop_toBottomOf="@id/Seis"
+            app:layout_constraintWidth_percent="0.5" />
+
+
+    -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

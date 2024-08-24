@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">TP1_GRUPO6 (V3)</string>
+    <string name="ce">CE</string>
+    <string name="divisor">/</string>
+    <string name="mas">+</string>
+    <string name="menos">-</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="multiplicar">*</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_0">0</string>
+    <string name="pantalla_0">0</string>
+    <string name="txt_calculadora">Calculadora</string>
 </resources>
